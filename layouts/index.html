@@ -2,8 +2,7 @@
 
 <div class="content container">
     <div class="posts">
-
-        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
         {{ range $paginator.Pages }}
         <div class="post">
             <h1 class="post-title">
@@ -17,7 +16,19 @@
             {{ .Content }}
         </div>
         {{ end }}
-        {{ template "_internal/pagination.html" . }}
+    </div>
+    <div class="container pagination">
+        {{ if $paginator.HasNext }}
+        <a class="pagination-item older" href="{{ $paginator.Next.URL }}">Older</a>
+        {{ else }}
+        <span class="pagination-item older">Older</span>
+        {{ end }}
+
+        {{ if $paginator.HasPrev }}
+        <a class="pagination-item newer" href="{{ $paginator.Prev.URL }}">Newer</a>
+        {{ else }}
+        <span class="pagination-item newer">Newer</span>
+        {{ end }}
     </div>
 </div>
 
