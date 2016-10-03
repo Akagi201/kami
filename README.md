@@ -12,5 +12,4 @@ Kami is a brazen two-column [hugo](http://gohugo.io/) theme. It pairs a prominen
 - [x] Support minutes to read.
 - [x] Support wordcount.
 - [ ] Support summary in index page.
-- [ ] Support categories in sidebar.
 - [ ] Support multi-language.
