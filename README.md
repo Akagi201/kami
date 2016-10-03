@@ -9,7 +9,8 @@ Kami is a brazen two-column [hugo](http://gohugo.io/) theme. It pairs a prominen
 - [x] Support pygments.
 - [x] Support pagination.
 - [x] Support LICENSE on each page.
+- [x] Support minutes to read.
+- [x] Support wordcount.
 - [ ] Support summary in index page.
-- [ ] Support minutes to read.
-- [ ] Support wordcount.
+- [ ] Support categories in sidebar.
 - [ ] Support multi-language.
