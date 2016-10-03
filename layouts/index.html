@@ -3,7 +3,8 @@
 <div class="content container">
     <div class="posts">
 
-        {{ range .Data.Pages }}
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+        {{ range $paginator.Pages }}
         <div class="post">
             <h1 class="post-title">
                 <a href="{{ .Permalink }}">
@@ -16,6 +17,7 @@
             {{ .Content }}
         </div>
         {{ end }}
+        {{ template "_internal/pagination.html" . }}
     </div>
 </div>
 
