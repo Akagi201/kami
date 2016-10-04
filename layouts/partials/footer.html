@@ -1,5 +1,9 @@
 {{ if isset .Site.Params "highlight" }}
 <script src="{{ "/js/highlight.pack.js" | absURL }}"></script>
-<script > hljs.initHighlightingOnLoad();</script>{{ end }}
+<script > hljs.initHighlightingOnLoad();</script>
+{{ end }}
+{{ if isset .Site.Params "googleAnalytics" }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
 </body>
 </html>
