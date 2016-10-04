@@ -1,6 +1,7 @@
 {{ if isset .Site.Params "highlight" }}
-<script src="{{ "/js/highlight.pack.js" | absURL }}"></script>
-<script > hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
 {{ if isset .Site.Params "googleAnalytics" }}
 {{ template "_internal/google_analytics_async.html" . }}
