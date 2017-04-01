@@ -3,8 +3,10 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
-{{ if isset .Site.Params "googleAnalytics" }}
+
+{{ if and (isset .Site.Params "googleAnalytics") (ne .Site.Params.googleAnalytics "") }}
 {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
+
 </body>
 </html>
