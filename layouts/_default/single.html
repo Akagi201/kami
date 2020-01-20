@@ -1,29 +1,18 @@
-{{ partial "header.html" . }}
+{{- define "main" -}}
 
-<div class="content container">
-    <div class="post">
-        <h1>{{ .Title }}</h1>
-        <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-        {{ .Content }}
+<article class="article">
+
+  {{ partial "page_header" . }}
+
+  <div class="article-container">
+
+    <div class="article-style">
+      {{ .Content }}
     </div>
 
-    {{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
-    {{ partial "disqus" . }}
-    {{ end }}
+    {{ partial "page_footer" . }}
 
-    <footer>
-        <div>
-            <p>
-                &copy; 2010-16 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Akagi201.</span></span>
-                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights
-                    reserved</a>;
-                please attribute properly and link back. <br>
-                Powered by <a href="http://gohugo.io">Hugo</a>.
-                Hosted by <a href="http://akagi201.org">Akagi201</a>.
-            </p>
-        </div>
-    </footer>
-</div>
+  </div>
+</article>
 
-{{ partial "footer.html" . }}
+{{- end -}}
