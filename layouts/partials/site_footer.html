@@ -17,8 +17,8 @@
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-    {{ if site.Params.beian }}
-    <a href="http://www.beian.miit.gov.cn/" target="_blank" >{{ .Site.Params.beian }}</a>
+    {{ if site.Params.footbar.beian }}
+    <a href="http://www.beian.miit.gov.cn/" target="_blank" >{{ site.Params.footbar.beian }}</a>
     {{ end }}
 
     {{ if not (in (slice "docs" "updates") .Type) }}
